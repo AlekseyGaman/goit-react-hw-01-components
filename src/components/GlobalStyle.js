@@ -19,9 +19,11 @@ body {
   ul {
     list-style: none;
     padding: 0;
+    margin: 0;
   }
   #root {
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
   }

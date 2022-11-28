@@ -1,9 +1,8 @@
 import styled from 'styled-components';
 
 export const ProfileSection = styled.div`
-  margin-top: 50px;
+  margin: 50px 0px 50px 0px;
   padding-top: 30px;
-  margin-bottom: 50px;
   width: 360px;
   background-color: #f7f8fa;
   box-shadow: 2px 4px 5px -2px rgba(0, 0, 0, 0.93);
@@ -46,7 +45,7 @@ export const ProfileLocation = styled.p`
 export const ProfileStats = styled.ul`
   display: flex;
   justify-content: space-around;
-  background-color: #dadee7;
+  background-color: #e1e8f7;
 `;
 
 export const ProfileItem = styled.li`
