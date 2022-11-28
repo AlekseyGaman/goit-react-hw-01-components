@@ -3,6 +3,7 @@ import 'modern-normalize';
 
 export const GlobalStyle = createGlobalStyle`
 body {
+  background-color: #dee4e9;
     margin: 0;
     font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
       'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
@@ -17,6 +18,7 @@ body {
   }
   ul {
     list-style: none;
+    padding: 0;
   }
   #root {
     display: flex;

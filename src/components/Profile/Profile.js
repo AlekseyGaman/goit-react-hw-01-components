@@ -1,36 +1,47 @@
 import { BiAt } from 'react-icons/bi';
-import { ProfileImg } from './Profile.styled';
+import {
+  ProfileImg,
+  ProfileDescription,
+  ProfileSection,
+  ProfileName,
+  ProfileTag,
+  ProfileLocation,
+  ProfileStats,
+  ProfileItem,
+  ProfileLabel,
+  ProfileQuantity,
+} from './Profile.styled';
 
 export const Profile = ({
   user: { username, tag, location, avatar, stats },
 }) => {
   return (
-    <div className="profile">
-      <div className="description">
+    <ProfileSection>
+      <ProfileDescription>
         <ProfileImg src={avatar} alt="User avatar" className="avatar" />
-        <p className="name">{username}</p>
-        <p className="tag">
+        <ProfileName>{username}</ProfileName>
+        <ProfileTag>
           <BiAt />
           {tag}
-        </p>
-        <p className="location">{location}</p>
-      </div>
+        </ProfileTag>
+        <ProfileLocation>{location}</ProfileLocation>
+      </ProfileDescription>
 
-      <ul className="stats">
-        <li>
-          <span className="label">Followers</span>
-          <span className="quantity">{stats.followers}</span>
-        </li>
-        <li>
-          <span className="label">Views</span>
-          <span className="quantity">{stats.views}</span>
-        </li>
-        <li>
-          <span className="label">Likes</span>
-          <span className="quantity">{stats.likes}</span>
-        </li>
-      </ul>
-    </div>
+      <ProfileStats>
+        <ProfileItem>
+          <ProfileLabel>Followers</ProfileLabel>
+          <ProfileQuantity>{stats.followers}</ProfileQuantity>
+        </ProfileItem>
+        <ProfileItem>
+          <ProfileLabel>Views</ProfileLabel>
+          <ProfileQuantity>{stats.views}</ProfileQuantity>
+        </ProfileItem>
+        <ProfileItem>
+          <ProfileLabel>Likes</ProfileLabel>
+          <ProfileQuantity>{stats.likes}</ProfileQuantity>
+        </ProfileItem>
+      </ProfileStats>
+    </ProfileSection>
   );
 };
 
